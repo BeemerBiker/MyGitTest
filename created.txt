@@ -1,0 +1,66 @@
+The following folders are assumed as available for use:
+d:\Projects\VSrepository
+d:\ProgramFiles
+d:\ProgramData
+
+
+
+Download and install VS2017
+	read this first:  https://www.visualstudio.com/vs/support/need-installing-visual-studio/
+	read this next: https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio
+	this one also:  https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio
+	go here:  https://www.visualstudio.com/downloads/ and select the free Community
+	Install into default location unless you have a small SSD "C" drive like me
+		then create and use D:\ProgramFiles and install into that folder
+	Make sure you get web components and configure for C#
+
+Download and install GIT
+	Go here:  https://git-scm.com/downloads
+	and select and install the windows version into D:ProgramFiles
+	select mingw64 even if no plans to use it
+	select nano for editor 
+	make sure you select bash as that will be used
+	after install, pin the Git "Git Bash" from the windows startup to your desktop and
+		then edit to to have the folowing lines
+echo off
+set PATH=D:\ProgramFiles\mingw-w64\i686-7.3.0-posix-dwarf-rt_v5-rev0\mingw32\bin;%PATH%
+D:
+C:\Windows\system32\cmd.exe /K "cd \projects\VSrepository"
+
+Create repository "MyGitTest" somewhere, suggest in "D:\projects\VSrepository"
+Create empty solution in that repository:  MyTwoTests
+At "MyTwoTests" in Solution Explorer add project using Console App (.NET Framework) named "ConsoleApp1"
+Add "Hello World" in program.cs as shown below here
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World");
+	    Console.ReadLine();
+        }
+    }
+}
+
+
+Click on "Save All"
+
+At "MyTwoTest" in Solution Explorer add 
+	using "Web - ASP.NET Web Application (.NET Framework)" named "WebApplication1" and click "OK"
+	after the OK, select "Empty", put an X in the checkbox "[]Web Forms" and click "OK"
+
+At "WebApplication1" in Solution Explorer, add "New Item", scroll down to "Web Form" and
+	change the name from "WebForm1.aspx" to "Default.aspx" then click "ADD"
+	Select "Default.aspx" in Solution Explorer, ensure that "Design" is selected and
+	position your cursor in the colored horizontal outlined box  at the top of the frame.
+	Add the phrase "Hello World" in the just below "div" in that same box.
+
+Click on "Save All" and select "Build Solution".  There should be two successes.
+
+
+In the Solution Explorer, right click on WebSolution1, select "Debug" then click on "Start New Instance"  
+	the program will run.  Stop the program by first selecting (up at top of VS2017) the DEBUG - STOP DEBUGGING
+	then close the windows that shows "hello world"
+
+Repeat for the console program.  To stop that program click on the console window and press the return key.
