@@ -62,8 +62,7 @@ At "WebApplication1" in Solution Explorer, add "New Item", scroll down to "Web F
 	change the name from "WebForm1.aspx" to "Default.aspx" then click "ADD"
 	Select "Default.aspx" in Solution Explorer, ensure that "Design" is selected and
 	position your cursor in the colored horizontal outlined box at the top of the frame.
-	Add the phrase "Hello World" in that colored line just below "div" in that same row.
-
+	Add the phrase "Hello World" in that colored line just below "div" in that same 
 Click on "Save All" and select "Build Solution".  There should be two successes.
 
 
@@ -99,3 +98,10 @@ git add -A
 git status
 git commit -m "updated created.txt"
 git push --all
+
+
+------------below used to update spider--------
+git reset --mixed origin/master
+git add .
+git commit -m "This is a new commit for what I originally planned to be an amendmend"
+git push origin master
