@@ -67,11 +67,22 @@ At "WebApplication1" in Solution Explorer, add "New Item", scroll down to "Web F
 Click on "Save All" and select "Build Solution".  There should be two successes.
 
 
-In the Solution Explorer, right click on WebSolution1, select "Debug" then click on "Start New Instance"  
+In the Solution Explorer, right click on WebApplication1, select "Debug" then click on "Start New Instance"  
 	the program will run.  Stop the program by first selecting (up at top of VS2017) the DEBUG - STOP DEBUGGING
 	then close the windows that shows "hello world"
 
-Repeat for the console program.  To stop that program click on the console window and press the return key.
+Repeat for the ConsoleApp1 program.  To stop that program click on the console window and press the return key.
+	
+To publish your WebApplication1 on the internet
+	log onto godaddy's Flesk Admin 	click on Web Deploy Publishing and save the "settings file" in documents
+	In VS2017 Solution Explorer, right click on WebApplication1 and select "Publish" = "START" - "IIs"
+		import that profile "settings file" and if asked for password, click "cancel"
+		select "Settings" and change your Web Deploy to show the following
+			Server:  YourGoDaddyHostName
+			SiteName:  YourGoDaddyHostName/WebApplication1
+			Destination URL: YourGoDaddyHostName/WebApplication1
+			leave password empty as github is public.  The password is encrypted but anyone could build your
+				program, change it, and publish a log of c--p on your site.
 
 You should be online and logged into your github under your UserName and MyGitTest showing instructions similar to the following.
 Find your "Git Bash" on the desktop and click on it.
