@@ -3,7 +3,7 @@ d:\Projects\VSrepository
 d:\ProgramFiles
 d:\ProgramData
 
-
+We assume microsoft Edge and having javascript and flash enabled as I had problems with chrome in the VS2018 environment.
 
 Download and install VS2017
 	read this first:  https://www.visualstudio.com/vs/support/need-installing-visual-studio/
@@ -12,21 +12,29 @@ Download and install VS2017
 	go here:  https://www.visualstudio.com/downloads/ and select the free Community
 	Install into default location unless you have a small SSD "C" drive like me
 		then create and use D:\ProgramFiles and install into that folder
-	Make sure you get web components and configure for C#
+	Make sure you get web components and configure for C# and web development
 
-Download and install GIT
+Download and install GIT	
 	Go here:  https://git-scm.com/downloads
 	and select and install the windows version into D:ProgramFiles
 	select mingw64 even if no plans to use it
-	select nano for editor 
+	select nano for editor DO NOT SELECT VISUAL STUDIO CODE EDITOR - YOU WILL BE SORRY!
 	make sure you select bash as that will be used
 	after install, pin the Git "Git Bash" from the windows startup to your desktop and
-		then edit to to have the folowing lines
-echo off
-set PATH=D:\ProgramFiles\mingw-w64\i686-7.3.0-posix-dwarf-rt_v5-rev0\mingw32\bin;%PATH%
-D:
-C:\Windows\system32\cmd.exe /K "cd \projects\VSrepository"
+		then make sure its properties are as follows:
+		Target: D:\ProgramFiles\Git\git-bash.exe
+		Start in: d:\projects\VSrepository
 
+Create Git Account and repository
+	browse to github and register.  Click on + and get a folder at
+		https://github.com/UserName
+		then create a new repository named: MyGitTest
+		make it public, put in a description and a Readme.md
+		click on "Create Repository"
+		we will be doing the http type install
+
+
+Using VS2017 ....
 Create repository "MyGitTest" somewhere, suggest in "D:\projects\VSrepository"
 Create empty solution in that repository:  MyTwoTests
 At "MyTwoTests" in Solution Explorer add project using Console App (.NET Framework) named "ConsoleApp1"
@@ -53,8 +61,8 @@ At "MyTwoTest" in Solution Explorer add
 At "WebApplication1" in Solution Explorer, add "New Item", scroll down to "Web Form" and
 	change the name from "WebForm1.aspx" to "Default.aspx" then click "ADD"
 	Select "Default.aspx" in Solution Explorer, ensure that "Design" is selected and
-	position your cursor in the colored horizontal outlined box  at the top of the frame.
-	Add the phrase "Hello World" in the just below "div" in that same box.
+	position your cursor in the colored horizontal outlined box at the top of the frame.
+	Add the phrase "Hello World" in that colored line just below "div" in that same row.
 
 Click on "Save All" and select "Build Solution".  There should be two successes.
 
@@ -64,3 +72,14 @@ In the Solution Explorer, right click on WebSolution1, select "Debug" then click
 	then close the windows that shows "hello world"
 
 Repeat for the console program.  To stop that program click on the console window and press the return key.
+
+You should be online and logged into your github under your UserName and MyGitTest showing instructions similar to the following.
+Find your "Git Bash" on the desktop and click on it.
+	navigate to d:\Projects\VSrepository\MyGetTest and do the following
+git init
+echo "# MyGitTest" >> README.md
+git remote add origin https://github.com/BeemerBiker/MyGitTest.git
+git add .
+git commit -m "first commit"
+git push origin master
+
