@@ -83,3 +83,8 @@ git add .
 git commit -m "first commit"
 git push origin master
 
+If the text "created.txt" was changed locally then to update it
+git add -A
+git status
+git commit -m "updated created.txt"
+git push --all
