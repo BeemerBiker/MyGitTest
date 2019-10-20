@@ -2,7 +2,7 @@ The following folders are assumed as available for use:
 d:\Projects\VSrepository
 d:\ProgramFiles
 d:\ProgramData
-
+--test--
 We assume microsoft Edge and having javascript and flash enabled as I had problems with chrome in the VS2018 environment.
 
 Download and install VS2017
